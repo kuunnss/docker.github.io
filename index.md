@@ -1,9 +1,5 @@
 ## Linux Docker Demo
 
-You can use the [editor on GitHub](https://github.com/kuunnss/docker.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
 ### 1.安装docker
 ···
 sudo apt install docker.io
@@ -15,6 +11,8 @@ sudo docker -v
 ```
 
 ### 3.配置 Docker 加速器
+
+使用 Docker 的时候，需要经常从官方获取镜像，但是由于显而易见的网络原因，拉取镜像的过程非常耗时，严重影响使用 Docker 的体验。
 ···
 curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://91221545.m.daocloud.io
 ···
@@ -24,4 +22,8 @@ curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://91221545
 sudo docker run Hello-World
 ```
 
+### 5.安装并运行nginx
+```
+sudo docker --name mynginx -d -p 8080:80 ngnix
+```
 
